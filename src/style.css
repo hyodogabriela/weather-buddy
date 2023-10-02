@@ -1,5 +1,11 @@
 h1 {
 color:#5e63b6;
+
+}
+h2{
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 0;
 }
 h3{
     font-size: 44px;
@@ -8,17 +14,29 @@ h3{
     line-height: 100px;
 }
 h4 {
-    font-size: 18px;
+    font-size: 16px;
     text-align: left;
     height: 100px;
     line-height: 100px;
+    margin-left: 0;
+}
+ul{
+    margin: 0;
+    padding: 0;
 }
 
+li {
+    list-style: none;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+}
 
 .weather {
     background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
     display: block;
     max-width: 700px;
+    border: 1px solid #27296d;
     border-radius: 16px;
     box-shadow: 0 30px 50px rgba(65,50,100,.08);
     padding: 40px;
@@ -34,4 +52,9 @@ h4 {
     line-height: 100px;
     text-align: right;
     max-width: 150px;
+    margin-left: 40px;
+}
+
+.WeatherForecast {
+    padding: 20px 5px 30px 10px;
 }
