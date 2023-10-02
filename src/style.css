@@ -1,6 +1,37 @@
 h1 {
-color:aquamarine;
+color:#5e63b6;
 }
 h3{
-    font-size: 100px;
+    font-size: 44px;
+    text-align: center;
+    height: 50px;
+    line-height: 100px;
+}
+h4 {
+    font-size: 18px;
+    text-align: left;
+    height: 100px;
+    line-height: 100px;
+}
+
+
+.weather {
+    background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+    display: block;
+    max-width: 700px;
+    border-radius: 16px;
+    box-shadow: 0 30px 50px rgba(65,50,100,.08);
+    padding: 40px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.weather-image {
+    height: 100px;
+    line-height: 100px;
+    text-align: right;
+    max-width: 150px;
 }
