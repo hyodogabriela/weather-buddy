@@ -3,18 +3,127 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/style.css">
     <title>Document</title>
 </head>
 <body>
 <div class="container">
-    <div class="weather">
+<div class="weather">
     <h1>
-        <img src="images/smiley_cat.png" alt="" width="80px">    Weather Buddy
+        <img src="images/smiley_cat.png" alt="" width="120px">    Weather Buddy
     </h1>
+<form action="">
+<div class="row">
+    <div class="col-9">
+    <input type="search" placeholder="Enter a city here..." class="form-search-input">
+    </div>
+    <div class="col-3">
+    <input type="submit" class="btn btn-primary w-100" value="Search">
+    </div>  
+</div>
+</form>
+<div class="WeatherInfo">
+<div class="row">
+    <div class="col-6">
+<h2>New York</h2>
+<ul>
+    <li>
+    <span>Monday 11:37</span>,few clouds    
+    </li>
+    <li>
+    Humidity: <strong>91%</strong>, Wind: <strong>5.14km/h  </strong> 
+    </li>
+</ul>
+    </div>
+    <div class="col-2">
+    </div>
+    <div class="col-2">
+    <img src="images/sunny_days.png" alt="" width="120px">
+    </div>
+    <div class="col-2">
+    <h3>12ºC</h3>
+    </div>
+</div>
+</div>
+<div class="WeatherForecast row">
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Mon
+            </div>
+            <img src="images/sunny_FILL0_wght200_GRAD-25_opsz48.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">19º</span>
+                <span class="forecast-temperature-min">12º</span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Tue
+            </div>
+            <img src="images/cloud.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">12º</span>
+                <span class="forecast-temperature-min">06º</span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Wed
+            </div>
+            <img src="images/raining.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">14º</span>
+                <span class="forecast-temperature-min">07º</span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Thu
+            </div>
+            <img src="images/partly_cloud.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">18º</span>
+                <span class="forecast-temperature-min">10º</span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Fri
+            </div>
+            <img src="images/cloudy_snowing.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">04º</span>
+                <span class="forecast-temperature-min">-02º</span>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="WeatherForecastPreview">
+            <div class="forecast-time">
+                Sat
+            </div>
+            <img src="images/snowing.png" alt="">
+            <div class="forecast-temperature">
+                <span class="forecast-temperature-max">06º</span>
+                <span class="forecast-temperature-min">-04º</span>
+            </div>
+        </div>
+    </div>
 
 
+
+</div>
+<footer>This project was coded by <strong>Gabriela Hyodo</strong>  and is open-sourced on GitHub and hosted on Netlify</footer>
 </div>
 <!-- this div is from the container of bootstrap -->
 </div>
