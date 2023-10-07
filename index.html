@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -13,32 +14,41 @@
     <h1>
         <img src="images/smiley_cat.png" alt="" width="120px">    WeatherBuddy
     </h1>
-<form action="">
+<form id="search-form" class="search-text-input">
 <div class="row">
-    <div class="col-9">
-    <input type="search" placeholder="Enter a city here..." class="form-search-input">
+    <div class="col-6">
+    <input type="text"
+    placeholder="Search a city here"
+    autofocus="on"
+    autocomplete="off"
+    id="search-text-input">
     </div>
     <div class="col-3">
-    <input type="submit" class="btn btn-primary w-100" value="Search">
+    <input type="submit" class="btn btn-primary w-100" value="Search" class="search-button" />
     </div>  
+    <div class="col-3">
+        <button>
+          Current Location
+        </button>
+        </div>
 </div>
 </form>
 <div class="WeatherInfo">
 <div class="row">
     <div class="col-6">
-<h2>New York</h2>
+<h2 id="city-name"></h2>
 <ul>
     <li>
-    <span>Monday 11:37</span>,few clouds    
-    </li>
-    <li>
+        <div class="displayDate">
+    <span id="date-time">Monday 11:37</span>
+</div>
+    <li id="description">
     Humidity: <strong>91%</strong>, Wind: <strong>5.14km/h  </strong> 
     </li>
 </ul>
     </div>
-    
     <div class="col">
-    <h3>12ºC</h3>
+    <h3 id="temperature"></h3>
     </div>
 </div>
 </div>
