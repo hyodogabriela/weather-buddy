@@ -27,7 +27,7 @@
     <input type="submit" class="btn btn-primary w-100" value="Search" class="search-button" />
     </div>  
     <div class="col-3">
-        <button>
+        <button type="button" class="btn btn-secondary">
           Current Location
         </button>
         </div>
@@ -35,20 +35,33 @@
 </form>
 <div class="WeatherInfo">
 <div class="row">
-    <div class="col-6">
+    <div class="col-4">
 <h2 id="city-name"></h2>
 <ul>
     <li>
         <div class="displayDate">
-    <span id="date-time">Monday 11:37</span>
+    <span id="date-time">Monday, 11:37</span>
 </div>
-    <li id="description">
-    Humidity: <strong>91%</strong>, Wind: <strong>5.14km/h  </strong> 
+    <li>
+    Humidity: <strong id="humidity"></strong>%
     </li>
+    <li>
+        Wind: <strong id="wind-speed"></strong>km/h
+        </li>
 </ul>
     </div>
-    <div class="col">
-    <h3 id="temperature"></h3>
+    <div class="col-3">
+     <div class="parent clearfix">
+        <div class="child float-left"><h3 id="temperature-display"></h3></div>
+        <div class="child float-right"><h4>ºC|ºF</h4></div>
+     </div> 
+    </div>
+    <div class="col-3" id="weather-icon">
+             
+    </div>
+    <div class="col-1" id="description">
+        <h5 >
+        </h5>
     </div>
 </div>
 </div>

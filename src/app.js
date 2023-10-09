@@ -1,4 +1,4 @@
-let now = new Date();
+/* let now = new Date();
 
 let displayDate = document.querySelector("#date-time");
 
@@ -51,15 +51,15 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
 function showTemperature(response) {
-    let temperature = Math.round(response.data.daily);
+    let temperature = response.data.city.temperature.feels_like;
     let cityName = response.data.city;
     let displayCity = document.querySelector("#city-name");
     displayCity.innerHTML = cityName;
     let displayTemperature = document.querySelector("#temperature-display");
     displayTemperature.innerHTML = `${temperature} ºC`;
   }
-  
-  function showLocation(position) {
+
+function showLocation(position) {
     let latitude = position.coords.latitude;
     let longitude = position.coords.longitude;
     let apiKey = "f0308t4943329c9be1off0f74f2fa59a";
@@ -72,3 +72,26 @@ function showTemperature(response) {
   }
   let button = document.querySelector("button");
   button.addEventListener("click", getCurrentPosition);
+ */
+   function displayTemperature(response) {
+    console.log(response.data);
+    let descriptionElement = document.querySelector("#description");
+    descriptionElement.innerHTML = response.data.condition.description;
+    let humidityElement = document.querySelector("#humidity");
+    humidityElement.innerHTML = response.data.temperature.humidity;
+    let windElement = document.querySelector("#wind-speed");
+    windElement.innerHTML = Math.round(response.data.wind.speed);
+   /*  let iconElement = document.querySelector("#weather-icon");
+    iconElement.innerHTML = response.data.condition.icon.; */
+    let cityName = document.querySelector("#city-name");
+    cityName.innerHTML = response.data.city;
+    let temperatureElement = document.querySelector("#temperature-display");
+    temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+  }
+  
+  let apiKey = "f0308t4943329c9be1off0f74f2fa59a";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}&units=metric`;
+
+  axios.get(apiUrl).then(displayTemperature);
+  
+ 
