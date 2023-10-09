@@ -84,3 +84,7 @@ li {
         text-align: right;
         line-height: 2;
 }
+
+#fahrenheit-link {
+    text-decoration: none;
+}

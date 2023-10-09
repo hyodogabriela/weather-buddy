@@ -129,11 +129,28 @@ function search (city) {
     axios.get(apiUrl).then(displayTemperature);
 }
     
+/* function handleError(error) {
+    if (error.response) {
+        alert("Error: Invalid city. Please enter a valid city name.");
+    } else if (error.request) {
+        alert("Error: No response from the server. Please try again later.");
+    } else { 
+        alert("Error: An unexpected error occurred. Please try again later.");
+}
+} */
 
-    function handleSubmit(event){
+function handleSubmit(event) {
     event.preventDefault();
     let cityInputElement = document.querySelector("#search-text-input");
-    search(cityInputElement.value);
+    let city = cityInputElement.value;
+  
+    if (city.trim() === "") {
+      alert("Please enter a city.");
+    } else if (!/^[a-zA-Z\s]+$/.test(city)) {
+      alert("Invalid city name. Please enter a valid city.");
+    } else {
+      search(city);
+    }
   }
 
   let searchButton = document.querySelector("#search-button");
@@ -156,6 +173,9 @@ function showLocation(position) {
 function displayFahrenheitTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature-display");
+
+    celsiusLink.classList.remove("active");
+    fahrenheitLink.classList.add("active");
     let fahrenheitTemperature = (celsiusTemperature * 9) / 5 +32; 
     temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 
@@ -164,6 +184,8 @@ function displayFahrenheitTemperature(event) {
 function displayCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature-display");
+    celsiusLink.classList.add("active");
+    fahrenheitLink.classList.remove("active");
     temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
     let celsiusTemperature =  null;
