@@ -14,25 +14,29 @@
     <h1>
         <img src="images/smiley_cat.png" alt="" width="120px">    WeatherBuddy
     </h1>
-<form id="search-form" class="search-text-input">
+
 <div class="row">
-    <div class="col-6">
+    <div class="col">
+        <form id="search-form" class="mb-3">
     <input type="text"
     placeholder="Search a city here"
     autofocus="on"
     autocomplete="off"
-    id="search-text-input">
+    id="search-text-input"
+    class="form-control-lg">
+    
+</form>
     </div>
-    <div class="col-3">
+    <div class="col">
     <input type="submit" class="btn btn-primary w-100" value="Search" class="search-button" />
     </div>  
-    <div class="col-3">
+    <div class="col">
         <button type="button" class="btn btn-secondary">
           Current Location
         </button>
         </div>
 </div>
-</form>
+
 <div class="WeatherInfo">
 <div class="row">
     <div class="col-4">
