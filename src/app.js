@@ -100,12 +100,10 @@ function showLocation(position) {
   }
   
   function displayTemperature(response) {
-    console.log(response.data);
     let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind-speed");
-    /*  let iconElement = document.querySelector("#weather-icon");
-    iconElement.innerHTML = response.data.condition.icon.; */
+    let iconElement = document.querySelector("#weather-icon");
     let cityName = document.querySelector("#city-name");
     let temperatureElement = document.querySelector("#temperature-display");
     let dateElement = document.querySelector("#date-time");
@@ -114,11 +112,16 @@ function showLocation(position) {
     humidityElement.innerHTML = response.data.temperature.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     cityName.innerHTML = response.data.city;
-    dateElement.innerHTML = formatDate(response.data.time * 1000)
+    dateElement.innerHTML = formatDate(response.data.time * 1000);
+    iconElement.setAttribute(
+    "src",`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
+    );
+    iconElement.setAttribute("alt", response.data.condition.description);
   }
   
   let apiKey = "f0308t4943329c9be1off0f74f2fa59a";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=Lisbon&key=${apiKey}&units=metric`;
+  let city = "Lisbon";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayTemperature);
   
