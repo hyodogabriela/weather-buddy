@@ -74,7 +74,7 @@ function showLocation(position) {
   button.addEventListener("click", getCurrentPosition);
  */
    
-  function formatDate(timestamp) {
+function formatDate(timestamp) {
     let date = new Date(timestamp);
     let hours = date.getHours();
     if (hours < 10) {
@@ -94,7 +94,6 @@ function showLocation(position) {
         "Saturday"
       ];
     let day = days[date.getDay()];
-
     return `${day}, ${hours}:${minutes}`;
 
   }
@@ -103,15 +102,18 @@ function displayTemperature(response) {
     let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind-speed");
-    let iconElement = document.querySelector("#weather-icon");
     let cityName = document.querySelector("#city-name");
     let temperatureElement = document.querySelector("#temperature-display");
     let dateElement = document.querySelector("#date-time");
-    temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+    let iconElement = document.querySelector("#weather-icon");
+    
+    celsiusTemperature = response.data.temperature.current;
+    
     descriptionElement.innerHTML = response.data.condition.description;
     humidityElement.innerHTML = response.data.temperature.humidity;
     windElement.innerHTML = Math.round(response.data.wind.speed);
     cityName.innerHTML = response.data.city;
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
     dateElement.innerHTML = formatDate(response.data.time * 1000);
     iconElement.setAttribute(
     "src",`http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
@@ -126,15 +128,16 @@ function search (city) {
   
     axios.get(apiUrl).then(displayTemperature);
 }
-  
-function handleSubmit(event){
+    
+
+    function handleSubmit(event){
     event.preventDefault();
     let cityInputElement = document.querySelector("#search-text-input");
     search(cityInputElement.value);
   }
 
-    let form = document.querySelector("#search-form");
-    form.addEventListener("submit", handleSubmit);
+  let searchButton = document.querySelector("#search-button");
+  searchButton.addEventListener("click", handleSubmit);
 
 function showLocation(position) {
     let latitude = position.coords.latitude;
@@ -147,5 +150,31 @@ function showLocation(position) {
   function getCurrentPosition() {
     navigator.geolocation.getCurrentPosition(showLocation);
   }
-  let button = document.querySelector("button");
-  button.addEventListener("click", getCurrentPosition);
+  let currentButton = document.querySelector("#current-location");
+  currentButton.addEventListener("click", getCurrentPosition);
+
+function displayFahrenheitTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature-display");
+    let fahrenheitTemperature = (celsiusTemperature * 9) / 5 +32; 
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+
+}
+
+function displayCelsiusTemperature(event) {
+    event.preventDefault();
+    let temperatureElement = document.querySelector("#temperature-display");
+    temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+    let celsiusTemperature =  null;
+
+    let form = document.querySelector("#search-form");
+    form.addEventListener("submit", handleSubmit);
+    
+    let fahrenheitLink = document.querySelector("#fahrenheit-link");
+    fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+    let celsiusLink = document.querySelector("#celsius-link");
+    celsiusLink.addEventListener("click", displayCelsiusTemperature);
+
+    /* search("New York"); */

@@ -28,10 +28,10 @@
 </form>
     </div>
     <div class="col">
-    <input type="submit" class="btn btn-primary w-100" value="Search" class="search-button" />
+        <button type="button" class="btn btn-primary" id="search-button">Search</button>
     </div>  
     <div class="col">
-        <button type="button" class="btn btn-secondary">
+        <button type="button" class="btn btn-secondary" id = "current-location">
           Current Location
         </button>
         </div>
@@ -42,7 +42,7 @@
     <div class="col-4">
 <h2 id="city-name"></h2>
 <ul>
-    <li>Last updated:</li><span id="date-time"></span>
+    <li>Last updated:</li><span id="date-time"><strong></strong></span>
     <li>
     Humidity: <strong id="humidity"></strong>%
     </li>
@@ -52,9 +52,9 @@
 </ul>
     </div>
     <div class="col-3">
-     <div class="parent clearfix">
+     <div class="parent clearfix weather-temperature">
         <div class="child float-left"><h3 id="temperature-display"></h3></div>
-        <div class="child float-right"><h4>ºC|ºF</h4></div>
+        <div class="child float-right"><h4><a href="#" id="celsius-link" class = "active">ºC</a>|<a href="#" id="fahrenheit-link">ºF</a></h4></div>
      </div> 
     </div>
     <div class="col-3">

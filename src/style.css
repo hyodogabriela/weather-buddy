@@ -61,6 +61,16 @@ li {
     padding: 20px 5px 30px 10px;
 }
 
+.weather-temperature .active {
+    color: black;
+    cursor: default;
+    text-decoration: none;
+
+}
+.weather-temperature .activ:hover {
+    text-decoration: none;
+}
+
 #temperature-display {
         padding-top: 10px;
         float: left;
