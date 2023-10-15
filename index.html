@@ -10,6 +10,7 @@
 </head>
 <body>
 <div class="container">
+    <div class="weather-app-wrapper">
 <div class="weather">
     <h1>
         <img src="images/smiley_cat.png" alt="" width="120px">    WeatherBuddy
@@ -78,87 +79,25 @@
 </div>
         
     </div>
-        
-<div class="WeatherForecast row">
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
+
+ <div class="weather-forecast" id="forecast">
+    <div class="row">
+        <div class="col-2">
+            <div class="weather-forecast-date">
                 Mon
             </div>
-            <img src="images/sunny_FILL0_wght200_GRAD-25_opsz48.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">19º</span>
-                <span class="forecast-temperature-min">12º</span>
-            </div>
+            <img src="images/cloud.png" alt="" width="42">
+            <div class="weather-forecast-temperatures">
+                <span class="weather-forecast-temperature-max"> 18° </span>
+                <span class="weather-forecast-temperature-min"> 12° </span>
+              </div>
         </div>
     </div>
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
-                Tue
-            </div>
-            <img src="images/cloud.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">12º</span>
-                <span class="forecast-temperature-min">06º</span>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
-                Wed
-            </div>
-            <img src="images/raining.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">14º</span>
-                <span class="forecast-temperature-min">07º</span>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
-                Thu
-            </div>
-            <img src="images/partly_cloud.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">18º</span>
-                <span class="forecast-temperature-min">10º</span>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
-                Fri
-            </div>
-            <img src="images/cloudy_snowing.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">04º</span>
-                <span class="forecast-temperature-min">-02º</span>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="WeatherForecastPreview">
-            <div class="forecast-time">
-                Sat
-            </div>
-            <img src="images/snowing.png" alt="">
-            <div class="forecast-temperature">
-                <span class="forecast-temperature-max">06º</span>
-                <span class="forecast-temperature-min">-04º</span>
-            </div>
-        </div>
-    </div>
-
-
 
 </div>
 <footer>This project was coded by <strong>Gabriela Hyodo</strong>  and is open-sourced on <a href="https://github.com/hyodogabriela/weather-buddy">GitHub</a> and hosted on <a href="https://stellar-palmier-c2644b.netlify.app/">Netlify</a>.</footer>
 </div>
-<!-- this div is from the container of bootstrap -->
+</div>
 </div>
 <script src="src/app.js"></script>
 </body>
