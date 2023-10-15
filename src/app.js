@@ -41,9 +41,7 @@
     </div>
 `;
 
-    })
-   
-   
+    }); 
 forecastHTML = forecastHTML + `</div>`;
 forecastElement.innerHTML = forecastHTML;
   }
@@ -51,6 +49,7 @@ forecastElement.innerHTML = forecastHTML;
 function getForrecast(coordinates) {
     let apiKey = "f0308t4943329c9be1off0f74f2fa59a";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+    
     axios.get(apiUrl).then(displayForecast);
 }
 
