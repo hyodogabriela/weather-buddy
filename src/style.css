@@ -15,8 +15,14 @@ footer {
 
 
 h1 {
-color: #a75265;
+color: #698474;
+font-family: 'Sometype Mono', monospace;
+font-weight: bold;
+transition-duration: 0.4s;
+}
 
+h1:hover{
+background-color: white;
 }
 h2{
     font-size: 32px;
@@ -61,7 +67,7 @@ li {
 .weather {
     margin-top: 25px;
     margin-bottom: 25px;
-    background: linear-gradient(181.2deg, rgb(181, 239, 249) 10.5%, rgb(254, 254, 254) 86.8%);
+    background: linear-gradient(89.9deg, rgba(178, 253, 238, 0.96) -8.1%, rgb(207, 244, 254) 26.3%, rgba(207, 244, 254, 0.48) 47.5%, rgba(254, 219, 243, 0.63) 61.5%, rgb(254, 219, 243) 78.7%, rgb(254, 207, 210) 109.2%);
     display: block;
     max-width: 800px;
     border: 1px solid #27296d;
@@ -86,10 +92,22 @@ li {
 .WeatherForecast {
     padding: 20px 5px 30px 10px;
 }
+/* #search-form {
+    padding: 12px 16px;
+    width: 175px;
+    font-size: 18px;
 
+} */
+
+#search-text-input {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 16px;
+    padding: 12px 16px;
+}
 #temperature-display {
         padding-top: 10px;
         float: left;
+        font-family: 'Quicksand', sans-serif;
         font-size: 46px;
         text-align: left;
         line-height: 3.1;
@@ -115,7 +133,9 @@ li {
     cursor: pointer;
     border: 1.5px solid white;
     background: #d7acd4;
-    font-size: 22px;
+    padding: 12px 16px;
+    width: 175px;
+    font-size: 18px;
     color: white;
     transition-duration: 0.4s;
 
@@ -129,7 +149,9 @@ li {
     cursor: pointer;
     border: 1.5px solid #ec7263;
     background: transparent;
-    font-size: 12px;
+    padding: 12px 16px;
+    width: 175px;
+    font-size: 18px;
     color: #ec7263;
     transition-duration: 0.4s;
 }
