@@ -24,15 +24,14 @@
     autofocus="on"
     autocomplete="off"
     id="search-text-input"
-    class="form-control-lg">
-    
+    class="form-control-lg"> 
 </form>
     </div>
     <div class="col">
         <button type="button" class="btn btn-primary" id="search-button">Search</button>
     </div>  
     <div class="col">
-        <button type="button" class="btn btn-secondary" id = "current-location">
+        <button type="button" class="btn btn-light" id = "current-location">
           Current Location
         </button>
         </div>
@@ -70,12 +69,12 @@
 </div>
 <div class="weather-message row">
     <div class="col-6">
-        <div class="weather-image">
-            <img src="images/sunny_days.png" alt="" width="120px" class="float-right">
+        <div class="weather-image" id="message-img">
+            <img src="" alt="" width="120px" class="float-right">
             </div>
         </div>
         <div class="col-6">
-            <h4>Good day for going out on a walk </h4>
+            <h4 id = "weather-message"></h4>
 </div>
         
     </div>
@@ -86,6 +85,6 @@
 </div>
 </div>
 <script src="src/app.js"></script>
-<footer align="center"><p>This project was coded by <strong>Gabriela Hyodo</strong>  and is open-sourced on <a href="https://github.com/hyodogabriela/weather-buddy">GitHub</a> and hosted on <a href="https://stellar-palmier-c2644b.netlify.app/">Netlify</a>.</p></footer>
+<footer id="footer"><p>This project was coded by <strong>Gabriela Hyodo</strong>  and is open-sourced on <a href="https://github.com/hyodogabriela/weather-buddy">GitHub</a> and hosted on <a href="https://stellar-palmier-c2644b.netlify.app/">Netlify</a>.</p></footer>
 </body>
 </html>

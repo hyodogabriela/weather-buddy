@@ -73,7 +73,7 @@ function displayTemperature(response) {
     let temperatureElement = document.querySelector("#temperature-display");
     let dateElement = document.querySelector("#date-time");
     let iconElement = document.querySelector("#weather-icon");
-    
+
     let celsiusTemperature = response.data.temperature.current;
     
     descriptionElement.innerHTML = response.data.condition.description;
@@ -90,7 +90,6 @@ function displayTemperature(response) {
    getForrecast(response.data.coordinates);
 
   }
- 
 
 function search (city) {
     let apiKey = "f0308t4943329c9be1off0f74f2fa59a";
@@ -100,29 +99,26 @@ function search (city) {
         displayTemperature(response);
     });
 }
-/* function handleError(error) {
-    if (error.response) {
-        alert("Error: Invalid city. Please enter a valid city name.");
-    } else if (error.request) {
-        alert("Error: No response from the server. Please try again later.");
-    } else { 
-        alert("Error: An unexpected error occurred. Please try again later.");
-}
-} */
 
 function handleSubmit(event) {
-    event.preventDefault();
-    let cityInputElement = document.querySelector("#search-text-input");
-    let city = cityInputElement.value;
-  
-    if (city.trim() === "") {
-      alert("Please enter a city.");
-    } else if (!/^[a-zA-Z\s]+$/.test(city)) {
-      alert("Invalid city name. Please enter a valid city.");
-    } else {
-      search(city);
-    }
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#search-text-input");
+  let city = cityInputElement.value;
+
+  if (city.trim() === "") {
+    alert("Please enter a city.");
+  } else if (!/^[a-zA-Z\u00C0-\u017F\s'´]+$/u.test(city)) {
+    alert("Invalid city name. Please enter a valid city.");
+  } else {
+    search(city);
   }
+}
+  const searchInput = document.getElementById('search-text-input');
+searchInput.addEventListener('keypress', function(event) {
+  if (event.key === 'Enter') {
+    handleSubmit(event);
+  }
+});
 
   let searchButton = document.querySelector("#search-button");
   searchButton.addEventListener("click", handleSubmit);
@@ -141,5 +137,15 @@ function showLocation(position) {
   let currentButton = document.querySelector("#current-location");
   currentButton.addEventListener("click", getCurrentPosition);
 
-    search("New York");
+  function applyNightStyle() {
+    var currentTime = new Date().getHours();
+    var stylesheetLink = document.querySelector("link[rel='stylesheet']");
+    if (currentTime >= 19 || currentTime < 6) {
+      stylesheetLink.href = 'src/nightstyle.css';
+    } else {
+      stylesheetLink.href = 'src/style.css';
+    }
+  }
+applyNightStyle();
+ search("New York");
 
