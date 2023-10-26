@@ -137,15 +137,5 @@ function showLocation(position) {
   let currentButton = document.querySelector("#current-location");
   currentButton.addEventListener("click", getCurrentPosition);
 
-  function applyNightStyle() {
-    var currentTime = new Date().getHours();
-    var stylesheetLink = document.querySelector("link[rel='stylesheet']");
-    if (currentTime >= 19 || currentTime < 6) {
-      stylesheetLink.href = 'src/nightstyle.css';
-    } else {
-      stylesheetLink.href = 'src/style.css';
-    }
-  }
-applyNightStyle();
  search("New York");
 
