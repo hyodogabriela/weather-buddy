@@ -137,5 +137,5 @@ function showLocation(position) {
   let currentButton = document.querySelector("#current-location");
   currentButton.addEventListener("click", getCurrentPosition);
 
- search("New York");
+ search("São Paulo");
 

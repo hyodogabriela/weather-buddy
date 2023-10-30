@@ -9,12 +9,9 @@ color: #698474;
 font-family: 'Sometype Mono', monospace;
 text-align: center;
 font-weight: bold;
-transition-duration: 0.4s;
+border-radius:16px;
 }
 
-h1:hover{
-background-color: white;
-}
 h2{
     font-size: 28px;
     text-align: left;
@@ -75,17 +72,12 @@ li {
 .WeatherForecast {
     padding: 20px 5px 30px 10px;
 }
-/* #search-form {
-    padding: 12px 16px;
-    width: 175px;
-    font-size: 18px;
-
-} */
 
 #search-text-input {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     padding: 12px 16px;
+    border-color: #a75265;
 }
 #weather-details {
     font-family: 'Quicksand', sans-serif;
@@ -116,15 +108,16 @@ li {
     top: -145px;
 
 }
-#weather-image{
-    height: 20px !important;
-    text-align: right;
+
+#weather-icon {
+    margin-top: 20px;
 }
 
 #description {
-        font-size: 14px;
-        text-align: left;
-        height: 20%;
+    margin-top: 60px;
+    font-size: 14px;
+    text-align: left;
+    height: 20%;
 }
 
 #footer{
@@ -134,33 +127,39 @@ li {
 
 #search-button {
     cursor: pointer;
-    border: 1.5px solid white;
-    background: #d7acd4;
+    border: 1.8px solid #77628c;
+    background: none;
     padding: 12px 16px;
     width: 175px;
     font-size: 18px;
-    color: white;
+    color: #77628c;
     transition-duration: 0.4s;
 
 }
 #search-button:hover {
-    background-color: #eec2c2;
+    background-color: #d7acd4;
     color: white;
+    border: 2px solid white;
 }
 
 #current-location {
     cursor: pointer;
-    border: 1.5px solid #ec7263;
+    border: 1.8px solid #71a0a5;
     background: transparent;
     padding: 12px 16px;
     width: 175px;
     font-size: 18px;
-    color: #ec7263;
+    color: #71a0a5;
     transition-duration: 0.4s;
 }
 
 #current-location:hover {
-    background-color: #febe7e;
-    color: #a75265;
+    border: 2px solid white;
+    background-color: #79c2d0;
+    color: white;
 
 }
+
+/* #forecast {
+
+} */
