@@ -4,16 +4,6 @@ body {
     min-height: 100vh;
 }
 
-footer {
-    
-    bottom: 0px;
-    width: 700px;
-    text-align: center;
-    margin-top: 690px;
-    margin-left: 410px;
-}
-
-
 h1 {
 color: #698474;
 font-family: 'Sometype Mono', monospace;
@@ -26,7 +16,7 @@ h1:hover{
 background-color: white;
 }
 h2{
-    font-size: 32px;
+    font-size: 28px;
     text-align: left;
     margin-bottom: 0;
 }
@@ -69,12 +59,12 @@ li {
     margin-top: 25px;
     margin-bottom: 25px;
     background: linear-gradient(89.9deg, rgba(178, 253, 238, 0.96) -8.1%, rgb(207, 244, 254) 26.3%, rgba(207, 244, 254, 0.48) 47.5%, rgba(254, 219, 243, 0.63) 61.5%, rgb(254, 219, 243) 78.7%, rgb(254, 207, 210) 109.2%);
-    display: block;
+    /* display: block; */
     max-width: 800px;
     border: 1px solid #27296d;
     border-radius: 16px;
     box-shadow: 0 30px 50px rgba(65,50,100,.08);
-    padding: 40px;
+    padding: 25px 40px 10px 40px;
     box-sizing: border-box;
     position: absolute;
     top: 50%;
@@ -126,14 +116,20 @@ li {
     top: -145px;
 
 }
+#weather-image{
+    height: 20px !important;
+    text-align: right;
+}
+
 #description {
         font-size: 14px;
-        text-align: right;
-        line-height: 2;
+        text-align: left;
+        height: 20%;
 }
 
 #footer{
     font-size: 14px;
+    margin-top:20px;
 }
 
 #search-button {
